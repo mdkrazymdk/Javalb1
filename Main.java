@@ -65,16 +65,16 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
 
-        // Додавання книг до бібліотеки
+      
         library.addBook(new Book("Book1", "Author1", "1234567890", 2020));
         library.addBook(new Book("Book2", "Author2", "0987654321", 2019));
         library.addBook(new Book("Book3", "Author3", "1112223334", 2021));
 
-        // Відображення всіх книг у бібліотеці
+  
         System.out.println("All Books in Library:");
         library.displayBooks();
 
-        // Пошук книги за назвою
+   
         String searchTitle = "Book2";
         Book foundBook = library.findBookByTitle(searchTitle);
         if (foundBook != null) {
@@ -83,7 +83,7 @@ public class Main {
             System.out.println("\nBook not found with title: " + searchTitle);
         }
 
-        // Видалення книги за номером ISBN
+   
         String isbnToRemove = "0987654321";
         boolean removed = library.removeBookByIsbn(isbnToRemove);
         if (removed) {
@@ -92,7 +92,7 @@ public class Main {
             System.out.println("\nBook with ISBN " + isbnToRemove + " not found in the library.");
         }
 
-        // Повторний вивід всіх книг у бібліотеці після видалення
+    
         System.out.println("\nUpdated List of Books in Library:");
         library.displayBooks();
     }
